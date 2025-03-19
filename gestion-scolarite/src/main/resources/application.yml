@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: gestion-scolarite
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/scolarite_db?useSSL=false&serverTimezone=UTC
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update  # Utilisez 'create', 'update', 'validate' ou 'none' selon le besoin
+    show-sql: true  # Active l'affichage des requêtes SQL dans la console
+
+  # Configuration pour éviter les erreurs de fuseau horaire
+  jackson:
+    time-zone: UTC
+
+
+server:
+  port: 8082
+
+
+springdoc:
+  api-docs:
+    path: /api-docs
