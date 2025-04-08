@@ -5,4 +5,6 @@ import org.springframework.stereotype.Repository;
 import uahb.m1gl.gestionscolarite.model.Classe;
 @Repository
 public interface ClasseRepository extends JpaRepository<Classe, Long> {
+    Classe findByCode(String code);
+    Classe findByNom(String nom);
 }
